@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('download (13).jfif'); /* Ensure this filename matches your folder */
+    background-image: url(''); /* Ensure this filename matches your folder */
     background-size: cover;
     background-position: center;
     overflow: hidden;
