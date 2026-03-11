@@ -1,3 +1,4 @@
+/* 1. Base Setup */
 * {
     margin: 0;
     padding: 0;
@@ -10,12 +11,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('download (13).jfif'); /* Add your image path back here */
+    background-image: url('download (13).jfif'); /* Ensure this filename matches your folder */
     background-size: cover;
     background-position: center;
     overflow: hidden;
+    position: relative;
 }
 
+/* 2. Visual Overlays */
 .background-overlay {
     position: absolute;
     top: 0;
@@ -34,15 +37,17 @@ body {
     z-index: 2;
 }
 
+/* 3. Main Container */
 .content-container {
     position: relative;
     z-index: 3;
     text-align: center;
-    margin-top: -60px;
-    width: 95%; /* Increased for horizontal space */
-    max-width: 1000px; /* Increased to allow tagline room */
+    margin-top: -60px; /* Pulls logo into black banner */
+    width: 90%;
+    max-width: 800px;
 }
 
+/* 4. Logo Section */
 .logo-box {
     background-color: #000;
     padding: 30px;
@@ -58,24 +63,31 @@ body {
     margin: 0 auto;
 }
 
-/* Horizontal Tagline Styling */
+/* 5. Vertical Tagline Styling */
+.tagline {
+    margin-top: 20px;
+}
+
 .services {
-    font-size: 1rem;
+    display: flex;
+    flex-direction: column; /* This makes it vertical */
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
     color: #000;
     font-weight: 700;
-    margin-top: 20px;
-    white-space: nowrap; /* Forces one line */
-    letter-spacing: 0.5px;
+    line-height: 1.2;
+    text-transform: uppercase;
 }
 
-.services span, .contact-info span, .legal span {
-    color: #000; /* Change to #ffcc00 if you want the bars orange */
-    padding: 0 10px;
-    font-weight: 400;
+/* Hide the pipes (|) for the vertical layout */
+.services span {
+    display: none;
 }
 
+/* 6. Main Message */
 .main-message {
-    margin-top: 60px;
+    margin-top: 50px;
 }
 
 .main-message h2 {
@@ -93,9 +105,10 @@ body {
     margin: 25px auto;
 }
 
+/* 7. Footer & Contact */
 .contact-info {
-    margin-top: 60px;
-    font-size: 1rem;
+    margin-top: 40px;
+    font-size: 1.1rem;
     color: #000;
 }
 
@@ -105,15 +118,21 @@ body {
     font-weight: 700;
 }
 
-.legal {
-    margin-top: 80px;
-    font-size: 0.75rem;
-    color: #000;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+/* Keep the separators visible in contact and legal footer */
+.contact-info span, .legal span {
+    padding: 0 10px;
+    font-weight: 400;
 }
 
-/* --- Responsive Fixes for Mobile --- */
+.legal {
+    margin-top: 60px;
+    font-size: 0.8rem;
+    color: #000;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* 8. Mobile Responsiveness */
 @media screen and (max-width: 600px) {
     .black-banner {
         height: 100px;
@@ -121,38 +140,38 @@ body {
 
     .logo-box {
         padding: 20px;
-        margin-top: 10px;
     }
 
     .logo {
-        width: 100px;
+        width: 110px;
     }
 
-    /* Shrink the horizontal tagline to fit mobile width */
     .services {
-        font-size: 0.58rem; 
-        letter-spacing: 0;
+        font-size: 0.85rem;
+        gap: 6px;
     }
 
-    .services span {
-        padding: 0 3px;
+    .main-message {
+        margin-top: 30px;
     }
 
     .main-message h2 {
         font-size: 18px;
-        max-width: 300px;
+        max-width: 280px;
         margin: 0 auto;
     }
 
     .divider {
-        width: 200px;
+        width: 180px;
     }
 
     .contact-info {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
+        margin-top: 30px;
     }
 
     .legal {
         margin-top: 40px;
+        font-size: 0.7rem;
     }
 }
