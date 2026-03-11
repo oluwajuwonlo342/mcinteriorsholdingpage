@@ -2,8 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Updated font name to match Google Fonts import */
-    font-family: 'Baloo Thambi 2', cursive;
+    font-family: 'Montserrat', sans-serif; /* Updated Font */
 }
 
 body {
@@ -11,7 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('download (13).jfif');
+    background-image: url('download\ \(13\).jfif');
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -115,7 +114,48 @@ body {
     font-size: 0.8rem;
     color: #555;
 }
+.mid-logo-container {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
 
+.logo-small {
+    width: 80px; /* Smaller version for the middle */
+    height: auto;
+    opacity: 0.8; /* Slightly subtle */
+}
+
+/* Adjusted Spacing */
+.main-message {
+    margin-top: 60px; 
+}
+
+.contact-info {
+    margin-top: 40px; /* Reduced since the logo is now above it */
+    font-size: 1rem;
+}
+
+.legal {
+    margin-top: 40px; /* Shifted down a bit as requested */
+    font-size: 0.75rem;
+    color: #555;
+    letter-spacing: 1px;
+    text-transform: uppercase; /* Makes legal look cleaner with Montserrat */
+}
+
+/* Update Mobile Query to handle the new logo */
+@media screen and (max-width: 600px) {
+    .logo-small {
+        width: 60px;
+    }
+    .legal {
+        margin-top: 50px;
+    }
+    .main-message h2 {
+        font-size: 20px; /* Montserrat is slightly thinner, so 20px fits well */
+        max-width: 300px;
+    }
+}
 /* Mobile Responsive Adjustments */
 @media screen and (max-width: 600px) {
     
