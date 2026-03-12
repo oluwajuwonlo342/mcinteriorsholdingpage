@@ -76,7 +76,7 @@ span{
     flex-direction: column; /* This makes it vertical */
     align-items: center;
     gap: 20px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #000;
     font-weight: 700;
     line-height: 1.2;
@@ -150,7 +150,7 @@ span{
     }
 
     .services {
-        font-size: 0.85rem;
+        font-size: 1.1rem;
         gap: 16px;
     }
 
