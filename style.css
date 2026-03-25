@@ -59,9 +59,56 @@ span{
   color: #F39C12;
 }
 
-.accreditat{
+/* --- Old rules to REMOVE or REPLACE --- */
+
+/* REMOVE this rule entirely. It turns border colors yellow,
+   which is probably not intended. */
+/* span{
+  color: #F39C12;
+} */
+
+/* REPLACE this entire rule */
+/* .accreditat{
     margin-top: 5%;
     margin-bottom: 5%;
+} */
+
+/* -------------------------------------- */
+
+
+/* --- New/Updated rules to ADD --- */
+
+/* Target the accreditation container */
+.accreditat {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;        /* Makes the container horizontal */
+    flex-direction: row; /* Aligns items side-by-side */
+    justify-content: center; /* Centers the row on the page */
+    align-items: center;    /* Vertically centers the logos */
+    gap: 30px;            /* Adds space between the logos */
+}
+
+/* Target specifically the images inside this container */
+.accreditat img {
+    height: 50px;      /* Set a fixed height for consistency */
+    width: auto;       /* Maintain aspect ratio */
+    display: block;
+    margin: 0;          /* Reset margins */
+}
+
+/* Add a rule to the mobile query at the bottom of the file (around line 170) */
+@media screen and (max-width: 600px) {
+    /* ... existing rules ... */
+
+    /* Adjust accreditation logos for mobile */
+    .accreditat {
+        margin-top: 30px;
+        gap: 20px;
+    }
+    .accreditat img {
+        height: 40px; /* Slightly smaller on mobile */
+    }
 }
 .logo {
     width: 160px;
